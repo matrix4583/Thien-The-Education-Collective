@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     name: String,
     email: String,
-    googleId: String
+    googleId: String,
+    cart: {type: mongoose.Schema.Types.ObjectId, ref: 'Cart'}
   }, {
     timestamps: true
   });

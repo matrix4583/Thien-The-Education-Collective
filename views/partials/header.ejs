@@ -17,9 +17,12 @@
   <div class="navbar-fixed">
     <nav>
       <div id="nav-mobile" class="nav-wrapper #212121 grey darken-4">
-        <img src="images/logo.png" class="brand-logo center" alt="" width="120px" height="90%">
+        <a href="/"><img src="images/logo.png" class="brand-logo center" alt="" width="120px" height="90%"></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+          <% if(user) { %>
+          <li><a href="/cart">Cart</a></li>
+          <% } %>
             <li><a href="/order">Order Online</a></li>
           <li>
             <% if (user) { %>
