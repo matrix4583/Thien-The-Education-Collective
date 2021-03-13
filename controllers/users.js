@@ -44,14 +44,16 @@ function order(req,res){
 function cart(req,res){
     let items;
     let prices;
+    let total;
     if(User.cart){
        items = User.cart.item
        prices = User.cart.price
+       total = User.cart.total
         // price = User.cart.price
-        console.log(items,'ITEMS DEFINED HERE')
-        res.render('cart', {items, prices})
+        //console.log(items,'ITEMS DEFINED HERE')
+        res.render('cart', {items, prices, total})
     } else {
-        res.render('cart',{items,prices})
+        res.render('cart',{items,prices, total})
     }
   
     

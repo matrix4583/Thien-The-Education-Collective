@@ -1,39 +1,46 @@
 <%- include('./partials/header') %>
-<main>
-    <table>
-        <thead>
-          <tr>
-              
-              <th>Item Name</th>
-              <th>Item Price</th>
-          </tr>
-        </thead>
+    <main>
 
-        <tbody>
-            <% if(items){ %>
-            <% for(let i=0;i < items.length;i++){%>
-          <tr>
-            <td><%= items[i] %></td>
-            <td>$<%= prices[i] %></td>
-            <% } %>
-          </tr>
-          <% } else { %>
-            <td>No Items In Cart</td>
-            <td>$0.00</td>
-            <% } %>
-        </tbody>
-        <td>Total</td>
-        <td>$0.00</td>
-      </table>
+        <% if(items){ %>
+            <table>
+                <thead>
+                    <tr>
+
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(let i=0;i < items.length;i++){%>
+                        <tr>
+                            <td>
+                                <%= items[i] %>
+                            </td>
+                            <td>$<%= prices[i] %>
+                            </td>
+                            <% } %>
+                        </tr>
+                        <td>Total</td>
+                        <td>$<%=total%>
+                        </td>
+                        <% } else { %>
+                            <h6>NO ITEMS IN CART</h6>
+                            <% } %>
+
+                </tbody>
+
+
+            </table>
 
 
 
-   
-        
-       
-          
-       
-         
-        
-</main>
-<%- include('./partials/footer') %>
+
+
+
+
+
+
+
+    </main>
+    <%- include('./partials/footer') %>

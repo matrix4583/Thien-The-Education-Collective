@@ -7,20 +7,29 @@ module.exports = {
 
 function addToCart(req,res) {
     const newCart = new Cart()
-    //console.log(req.body,'reqqq')
     const prices = []
     const items = []
-    for(let i=0;i<req.body.item.length;i++){
-        //console.log(req.body.item[i], 'heeerrree')
-        const splitItem = req.body.item[i].split('.')
-        //console.log(splitItem)
+    console.log(typeof req.body.item)
+    if(typeof req.body.item === "string"){
+        const splitItem = req.body.item.split('.')
         items.push(splitItem[0])
-       prices.push(parseInt(splitItem[1])) 
+        prices.push(parseInt(splitItem[1])) 
+    } else {
+        console.log(typeof req.body.item,'HEEERRREEE', req.body.item.length)
+        for(let i=0;i<req.body.item.length;i++){
+            const splitItem = req.body.item[i].split('.')
+            items.push(splitItem[0])
+           prices.push(parseInt(splitItem[1])) 
+        }
     }
-    console.log(items,prices)
+
+
+    let sum = prices.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    newCart.total = sum
     newCart.item = items
     newCart.price = prices
-
     User.cart = newCart
     newCart.save(function(err){
         res.redirect('/cart')
