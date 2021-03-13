@@ -42,15 +42,16 @@ function order(req,res){
     res.render('order')
 }
 function cart(req,res){
-    console.log(User.cart)
+    let items;
+    let prices;
     if(User.cart){
-        // items = User.cart.item
+       items = User.cart.item
+       prices = User.cart.price
         // price = User.cart.price
-        res.render('cart')
+        console.log(items,'ITEMS DEFINED HERE')
+        res.render('cart', {items, prices})
     } else {
-        items = null
-        price = null
-        res.render('cart')
+        res.render('cart',{items,prices})
     }
   
     

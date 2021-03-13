@@ -46,6 +46,10 @@
     <li><a href="/menu">Menu</a></li>
     <li><a href="/about">Hours & Location</a></li>
     <li><a href="/order">Order Online</a></li>
+    <% if(user) { %>
+      <li><a href="/cart">Cart</a></li>
+      <% } %>
+    
     <li>
         <% if (user) { %>
           <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>

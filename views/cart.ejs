@@ -1,5 +1,39 @@
 <%- include('./partials/header') %>
 <main>
-    
+    <table>
+        <thead>
+          <tr>
+              
+              <th>Item Name</th>
+              <th>Item Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% if(items){ %>
+            <% for(let i=0;i < items.length;i++){%>
+          <tr>
+            <td><%= items[i] %></td>
+            <td>$<%= prices[i] %></td>
+            <% } %>
+          </tr>
+          <% } else { %>
+            <td>No Items In Cart</td>
+            <td>$0.00</td>
+            <% } %>
+        </tbody>
+        <td>Total</td>
+        <td>$0.00</td>
+      </table>
+
+
+
+   
+        
+       
+          
+       
+         
+        
 </main>
 <%- include('./partials/footer') %>
