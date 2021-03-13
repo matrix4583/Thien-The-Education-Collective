@@ -36,8 +36,11 @@
 
 
               <% if(items){ %>
-                <form action="" method="">
-                    <button class="waves-effect waves-light btn">
+                <a href="/order"><button type="submit" class="waves-effect waves-light btn">
+                    ADD MORE ITEMS
+                  </button></a><br><br>
+                <form action="/cart/<%=cartId%>/checkout?_method=DELETE" method="POST">
+                    <button type="submit" class="waves-effect waves-light btn">
                       Checkout
                     </button>
                   </form><br>

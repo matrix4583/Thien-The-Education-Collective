@@ -7,7 +7,9 @@ router.get('/about', usersCtrl.about);
 router.get('/menu', usersCtrl.menu)
 router.get('/order',isLoggedIn, usersCtrl.order)
 router.get('/cart',isLoggedIn, usersCtrl.cart)
+router.get('/checkout', usersCtrl.goCheckOut)
 router.delete('/cart/:id', usersCtrl.delete)
+router.delete('/cart/:id/checkout', usersCtrl.checkOut)
 
 
 
