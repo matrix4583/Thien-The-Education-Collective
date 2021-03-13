@@ -2,20 +2,22 @@ const User = require('../models/user')
 const Cart = require('../models/cart')
 
 module.exports = {
-    addToCart
+    addToCart,
+   
 }
+
 
 function addToCart(req,res) {
     const newCart = new Cart()
     const prices = []
     const items = []
-    console.log(typeof req.body.item)
+    //console.log(typeof req.body.item)
     if(typeof req.body.item === "string"){
         const splitItem = req.body.item.split('.')
         items.push(splitItem[0])
         prices.push(parseInt(splitItem[1])) 
     } else {
-        console.log(typeof req.body.item,'HEEERRREEE', req.body.item.length)
+        //console.log(typeof req.body.item,'HEEERRREEE', req.body.item.length)
         for(let i=0;i<req.body.item.length;i++){
             const splitItem = req.body.item[i].split('.')
             items.push(splitItem[0])

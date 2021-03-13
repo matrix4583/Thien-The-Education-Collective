@@ -6,7 +6,8 @@ module.exports = {
     about,
     menu,
     order,
-    cart
+    cart,
+    delete: deleteCart
     
 }
 
@@ -30,7 +31,11 @@ function index(req, res, next){
     //     });
     // });
 }
-
+function deleteCart(req, res) {
+    delete User.cart;
+    res.redirect('/cart')
+        
+}
 
 function about(req,res){
     res.render('about')
@@ -45,15 +50,17 @@ function cart(req,res){
     let items;
     let prices;
     let total;
+    let cartId;
     if(User.cart){
        items = User.cart.item
        prices = User.cart.price
        total = User.cart.total
+       cartId = User.cart._id
         // price = User.cart.price
-        //console.log(items,'ITEMS DEFINED HERE')
-        res.render('cart', {items, prices, total})
+        console.log(User.cart._id,'ITEMS DEFINED HERE')
+        res.render('cart', {items, prices, total, cartId})
     } else {
-        res.render('cart',{items,prices, total})
+        res.render('cart',{items, prices, total, cartId})
     }
   
     
