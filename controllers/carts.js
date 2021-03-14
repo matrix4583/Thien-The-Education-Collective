@@ -49,8 +49,6 @@ function addToCart(req,res) {
         let flatPrices = User.cart.price;
         User.cart.item = flatten(flatItems)
         User.cart.price = flatten(flatPrices)
-
-
         newCart = User.cart;
 
     } else {

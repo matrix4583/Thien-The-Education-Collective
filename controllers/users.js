@@ -9,9 +9,10 @@ module.exports = {
     cart,
     delete: deleteCart,
     checkOut,
-    goCheckOut
+    goCheckOut,
     
 }
+
 function goCheckOut(req,res){
     res.render('checkout')
 }

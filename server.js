@@ -21,6 +21,7 @@ require('./config/passport');
 const indexRoutes = require('./routes/index');
 const usersRoutes = require('./routes/users');
 const cartsRoutes = require('./routes/carts')
+const reviewsRoutes = require('./routes/reviews')
 
 
 
@@ -56,6 +57,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 app.use('/cart', cartsRoutes)
+app.use('/reviews', reviewsRoutes)
 
 
 // invalid request, send 404 page
