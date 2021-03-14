@@ -10,6 +10,7 @@ module.exports = {
     delete: deleteCart,
     checkOut,
     goCheckOut,
+    uhoh
     
 }
 
@@ -48,6 +49,11 @@ function deleteCart(req, res) {
 
 function about(req,res){
     res.render('about')
+}
+
+function uhoh(req, res){
+    console.log(user)
+    res.render('uhoh')
 }
 function menu(req,res){
     res.render('menu')

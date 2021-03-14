@@ -1,40 +1,51 @@
 <%- include('./partials/header') %>
-<main>
+  <main>
 
- 
-    
-<%reviews.forEach(function(review) {%>
-    <div class="row">
+
+
+    <%reviews.forEach(function(review) {%>
+      <div class="row">
         <div class="col s12 m5">
           <div class="card-panel teal">
-            <span class="white-text"> <%=review.content%>
+            <span class="white-text">
+              <%=review.content%>
                 <%=review.rating%> STARS
             </span>
+            <% if(user) { %>
+                <%if(userEmail === 'andrewdimes@gmail.com'){ %>
+              <form style="width: 100px" action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                <button type="submit">DELETE</button>
+              </form>
+              <% } %>
+              <% }%>
+
+         
+
           </div>
         </div>
       </div>
    
 
-    <%});%>
 
-    <h2>Reviews</h2>
-    <form style="width:300px" method="POST" action="/reviews/post">
-      <label>Review:</label>
-      <textarea name="content"></textarea>
-      <label>Rating:</label>
-      <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <input type="submit" value="Add Review">
-    </form>
+      <%});%>
 
-    
+        <h2>Reviews</h2>
+        <form style="width:300px" method="POST" action="/reviews/post">
+          <label>Review:</label>
+          <textarea name="content"></textarea>
+          <label>Rating:</label>
+          <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <input type="submit" value="Add Review">
+        </form>
 
-</main>
-   
-    <%- include('./partials/footer') %>
-  
+
+
+  </main>
+
+  <%- include('./partials/footer') %>

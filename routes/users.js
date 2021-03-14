@@ -4,6 +4,7 @@ const user = require('../models/user');
 
 router.get('/users', usersCtrl.index);
 router.get('/about', usersCtrl.about);
+router.get('/uhoh', usersCtrl.uhoh)
 router.get('/menu', usersCtrl.menu)
 router.get('/order',isLoggedIn, usersCtrl.order)
 router.get('/cart',isLoggedIn, usersCtrl.cart)

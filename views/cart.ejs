@@ -1,59 +1,52 @@
 <%- include('./partials/header') %>
-    <main>
+  <main>
 
-        <% if(items){ %>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Item Price</th>
-                    </tr>
-                </thead>
+    <% if(items){ %>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+          </tr>
+        </thead>
 
-                <tbody>
-                    <% for(let i=0;i < items.length;i++){%>
-                        <tr>
-                            <td>
-                                <form style = "width: 100px" action=""
-                                 method="">
-                                <button type="submit">X</button>
-                              </form><%= items[i] %>
-                            </td>
-                            <td>$<%= prices[i] %>
-                            </td>
-                            <% } %>
-                        </tr>
-                    
-                        <td>Total</td>
-                        <td>$<%=total%>
-                        </td>
-                        <% } else { %>
-                            <h6>NO ITEMS IN CART</h6>
-                            <% } %>
-                </tbody>
-            </table>
-            <br>
+        <tbody>
+          <% for(let i=0;i < items.length;i++){%>
+            <tr>
+              <td>
+                <%= items[i] %>
+              </td>
+              <td>$<%= prices[i] %>
+              </td>
+              <% } %>
+            </tr>
+
+            <td>Total</td>
+            <td>$<%=total%>
+            </td>
+            <% } else { %>
+              <h6>NO ITEMS IN CART</h6>
+              <% } %>
+        </tbody>
+      </table>
+      <br>
 
 
-              <% if(items){ %>
-                <a href="/order"><button type="submit" class="waves-effect waves-light btn">
-                    ADD MORE ITEMS
-                  </button></a><br><br>
-                <form action="/cart/<%=cartId%>/checkout?_method=DELETE" method="POST">
-                    <button type="submit" class="waves-effect waves-light btn">
-                      Checkout
-                    </button>
-                  </form><br>
-                <form action="/cart/<%=cartId%>?_method=DELETE" method="POST">
-                    <button type="submit" class="waves-effect waves-light btn">
-                      Clear Cart
-                    </button>
-                  </form>
-                  <% } %>
-
-             
-
-            
+      <% if(items){ %>
+        <a href="/order"><button type="submit" class="waves-effect waves-light btn">
+            ADD MORE ITEMS
+          </button></a><br><br>
+        <form action="/cart/<%=cartId%>/checkout?_method=DELETE" method="POST">
+          <button type="submit" class="waves-effect waves-light btn">
+            Checkout
+          </button>
+        </form><br>
+        <form action="/cart/<%=cartId%>?_method=DELETE" method="POST">
+          <button type="submit" class="waves-effect waves-light btn">
+            Clear Cart
+          </button>
+        </form>
+        <% } %>
 
 
 
@@ -64,5 +57,9 @@
 
 
 
-    </main>
-    <%- include('./partials/footer') %>
+
+
+
+
+  </main>
+  <%- include('./partials/footer') %>
