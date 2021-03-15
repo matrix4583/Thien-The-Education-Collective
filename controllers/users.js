@@ -10,8 +10,18 @@ module.exports = {
     delete: deleteCart,
     checkOut,
     goCheckOut,
-    uhoh
+    uhoh,
+    hhmenu,
+    drinks
     
+}
+
+function hhmenu(req, res){
+    res.render('hhmenu')
+}
+
+function drinks(req,res){
+    res.render('drinks')
 }
 
 function goCheckOut(req,res){
@@ -19,9 +29,11 @@ function goCheckOut(req,res){
 }
 
 function checkOut(req,res){
-    delete User.cart;
-    res.redirect('/checkout')
-
+    Cart.findByIdAndDelete(req.params.id,function(err){
+        delete User.cart
+        res.redirect('/checkout')
+    })
+    
 }
 function index(req, res, next){
   
@@ -42,8 +54,10 @@ function index(req, res, next){
     // });
 }
 function deleteCart(req, res) {
-    delete User.cart;
-    res.redirect('/cart')
+    Cart.findByIdAndDelete(req.params.id,function(err){
+        delete User.cart
+        res.redirect('/cart')
+    })
         
 }
 
@@ -52,7 +66,6 @@ function about(req,res){
 }
 
 function uhoh(req, res){
-    console.log(user)
     res.render('uhoh')
 }
 function menu(req,res){

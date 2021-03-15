@@ -3,46 +3,51 @@
 
 
 
+
+<h2>Recent Reviews</h2>
+
+
     <%reviews.forEach(function(review) {%>
-      <div class="row">
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              <%=review.content%>
-                <%=review.rating%> STARS
-            </span>
-            <% if(user) { %>
-                <%if(userEmail === 'andrewdimes@gmail.com'){ %>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="<%=review.avatar%>" alt="" class="circle">
+          <span class="title"><%=review.content%></span>
+          <p><%=review.rating%>/5 <br>
+            Posted by <%=review.name %>
+          </p>
+          <a href="" class="secondary-content"><% if(user) { %>
+            <%if(userName===review.name){ %>
               <form style="width: 100px" action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                <button type="submit">DELETE</button>
+                <button class="btn #616161 grey darken-2" type="submit"> <i class="material-icons">delete_forever</i></button>
               </form>
               <% } %>
-              <% }%>
-
-         
-
-          </div>
-        </div>
-      </div>
-   
-
+                <% }%></a>      
+        </li>
+      </ul>
 
       <%});%>
+        <% if(user) { %>
+          <h2>Add Review</h2>
+          <form style="width:300px" method="POST" action="/reviews/post">
+            <label>Review:</label>
+            <textarea name="content"></textarea>
+            <label>Rating:</label>
+            <select name="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
 
-        <h2>Reviews</h2>
-        <form style="width:300px" method="POST" action="/reviews/post">
-          <label>Review:</label>
-          <textarea name="content"></textarea>
-          <label>Rating:</label>
-          <select name="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-          <input type="submit" value="Add Review">
-        </form>
+            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+
+            <!-- <input type="submit" value="Add Review"> -->
+          </form><br>
+
+          <% } %>
 
 
 

@@ -33,17 +33,20 @@
 
 
       <% if(items){ %>
-        <a href="/order"><button type="submit" class="waves-effect waves-light btn">
-            ADD MORE ITEMS
+        <a href="/order"><button type="submit" class="btn waves-effect waves-light black">
+            ADD ITEMS
+          <i class="material-icons right">add_shopping_cart</i>
           </button></a><br><br>
         <form action="/cart/<%=cartId%>/checkout?_method=DELETE" method="POST">
-          <button type="submit" class="waves-effect waves-light btn">
+          <button type="submit" class="btn waves-effect waves-light black">
             Checkout
+            <i class="material-icons right">credit_card</i>
           </button>
         </form><br>
         <form action="/cart/<%=cartId%>?_method=DELETE" method="POST">
-          <button type="submit" class="waves-effect waves-light btn">
+          <button type="submit" class="btn waves-effect waves-light black">
             Clear Cart
+            <i class="material-icons right">delete</i>
           </button>
         </form>
         <% } %>

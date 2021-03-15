@@ -6,6 +6,8 @@ router.get('/users', usersCtrl.index);
 router.get('/about', usersCtrl.about);
 router.get('/uhoh', usersCtrl.uhoh)
 router.get('/menu', usersCtrl.menu)
+router.get('/hhmenu', usersCtrl.hhmenu);
+router.get('/drinks', usersCtrl.drinks)
 router.get('/order',isLoggedIn, usersCtrl.order)
 router.get('/cart',isLoggedIn, usersCtrl.cart)
 router.get('/checkout', usersCtrl.goCheckOut)

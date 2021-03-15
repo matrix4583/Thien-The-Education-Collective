@@ -15,7 +15,9 @@
 
 <body>
   <div class="navbar-fixed">
+ 
     <nav>
+
       <div id="nav-mobile" class="nav-wrapper #212121 grey darken-4">
         <a href="/"><img src="images/logo.png" class="brand-logo center" alt="" width="120px" height="90%"></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -35,7 +37,12 @@
         </ul>
         <ul class="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
+            <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Menu</a></li>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a  id="black" href="/menu">Food</a></li>
+              <li><a  id="black" href="/drinks">Drinks</a></li>
+              <li><a  id="black" href="/hhmenu">Happy Hour</a></li>
+            </ul>
             <li><a href="/about">Hours & Location</a></li>
             <li><a href="/reviews">Reviews</a></li>
         </ul>

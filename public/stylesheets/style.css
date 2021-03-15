@@ -7,8 +7,9 @@ body {
 main {
   flex: 1 0 auto;
 }
-
-
+#black{
+  color: black;
+}
 .brand-logo {
   margin-left: 15px;
 }

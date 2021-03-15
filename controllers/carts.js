@@ -44,7 +44,7 @@ function addToCart(req,res) {
         User.cart.total = User.cart.total + sum
         User.cart.item.push(items) 
         User.cart.price.push(prices)
-        console.log(User.cart.item,'HEREEESSS')
+        //console.log(User.cart.item,'HEREEESSS')
         let flatItems = User.cart.item;
         let flatPrices = User.cart.price;
         User.cart.item = flatten(flatItems)

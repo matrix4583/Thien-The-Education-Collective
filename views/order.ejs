@@ -1,9 +1,9 @@
 <%- include('./partials/header') %>
 
 <main>
-    <form action='/cart' method='POST'>
-
-      <div class="input-field col l2"  style="width:300px">
+  <div class="row">
+    <form class="col s12 m4 l8" action='/cart' method='POST'>
+      <div class="col s12"  style="width: 300px">
         <select name="item" multiple>
           <option value="" disabled selected>Appetizers</option>
           <option value="Chicken Quesadilla.10">Chicken Quesadilla $10</option>
@@ -65,9 +65,16 @@
             </select>
     
       </div><br>
-      
-<input class="btn" type="submit" value="Add To Cart">
+      <button class="btn waves-effect waves-light black" type="submit" name="action">Add To Cart
+        <i class="material-icons right">add_shopping_cart</i>
+      </button><br><br>
     </form>
+
+
+
+
+  </div>
+   
 </main>
 
 
