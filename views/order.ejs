@@ -1,18 +1,16 @@
 <%- include('./partials/header') %>
 
-<main>
-  <div class="row">
-    <form class="col s12 m4 l8" action='/cart' method='POST'>
-      <div class="col s12"  style="width: 300px">
+<main class="container center">
+    <form action='/cart' method='POST'><br>
+      <div class="input-field col l2"  >
         <select name="item" multiple>
           <option value="" disabled selected>Appetizers</option>
           <option value="Chicken Quesadilla.10">Chicken Quesadilla $10</option>
           <option value="Mozzerella Sticks.6">Mozzerella Sticks $6</option>
           <option value="Soft Pretzels.8">Soft Pretzels $8</option>
         </select>
-        
     </div><br>
-    <div class="input-field col l2"  style="width:300px">
+    <div class="input-field col l2">
       <select name="item" multiple>
         <option value="" disabled selected>Burgers</option>
         <option value="Classic Cheeseburger.10">Classic Cheeseburger $10</option>
@@ -21,7 +19,7 @@
       </select>
         
       </div><br>
-      <div class="input-field col l2"  style="width:300px">
+      <div class="input-field col l2">
         <select name="item" multiple>
           <option value="" disabled selected>Sandwiches</option>
           <option value="French Dip.10">French Dip $10</option>
@@ -30,7 +28,7 @@
         </select>
     
       </div><br>
-      <div class="input-field col l2"  style="width:300px">
+      <div class="input-field col l2"  >
         <select name="item" multiple>
           <option value="" disabled selected>Wings</option>
           <option value="Five Wings.7">5 Wings $7</option>
@@ -41,7 +39,7 @@
         </select>
         
       </div><br>
-      <div class="input-field col l2"  style="width:300px">
+      <div class="input-field col l2"  >
         <select name="item" multiple>
           <option value="" disabled selected>Salads</option>
           <option value="House Salad.6">House $6</option>
@@ -50,14 +48,14 @@
           <option value="Ceaser Salad W/ Chicken.9">Ceaser W/ Chicken $9</option>
         </select>
       </div><br>
-      <div class="input-field col l2"  style="width:300px">
+      <div class="input-field col l2"  >
         <select name="item" multiple>
           <option value="" disabled selected>Desserts</option>
           <option value="Lava Cake.5">Lava Cake $5</option>
           <option value="Fried Cheesecake.5">Fried Cheescake $5</option>
         </select>
     </div><br>
-        <div class="input-field col l2"  style="width:300px">
+        <div class="input-field col l2" >
             <select name="item" multiple>
               <option value="" disabled selected>Drinks</option>
               <option value="2-liter Coke.3">2-liter Coke $3</option>
@@ -73,7 +71,7 @@
 
 
 
-  </div>
+
    
 </main>
 

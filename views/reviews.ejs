@@ -4,9 +4,11 @@
 
 
 
-<h2>Recent Reviews</h2>
+<h2 class="center">Recent Reviews</h2>
 
+<div class="container">
 
+  <div class="col s12" class="form" style="margin-left:100px; margin-right:100px">
     <%reviews.forEach(function(review) {%>
       <ul class="collection">
         <li class="collection-item avatar">
@@ -24,33 +26,49 @@
                 <% }%></a>      
         </li>
       </ul>
-
+   
       <%});%>
+    </div>
+
+</div>
+
         <% if(user) { %>
-          <h2>Add Review</h2>
-          <form style="width:300px" method="POST" action="/reviews/post">
-            <label>Review:</label>
-            <textarea name="content"></textarea>
-            <label>Rating:</label>
-            <select name="rating">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+          <div class="container">
+                
+            <h2 class="center">Add Review</h2>
+            <form style="margin-left:100px; margin-right:100px" method="POST" action="/reviews/post">
+              <label>Review:</label>
+              <textarea name="content"></textarea>
+              <label>Rating:</label>
+              <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            
+  
+              <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+              <!-- <input type="submit" value="Add Review"> -->
+            </form><br>
 
-            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-            </button>
 
-            <!-- <input type="submit" value="Add Review"> -->
-          </form><br>
-
-          <% } %>
+        <% } %>
 
 
 
+          </div>
+    
+
+
+
+
+
+
+          
   </main>
 
   <%- include('./partials/footer') %>
