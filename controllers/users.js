@@ -12,8 +12,15 @@ module.exports = {
     goCheckOut,
     uhoh,
     hhmenu,
-    drinks
+    drinks,
+    remove
     
+}
+
+
+function remove(req, res){
+    console.log(req.user)
+    res.redirect('/cart')
 }
 
 function hhmenu(req, res){

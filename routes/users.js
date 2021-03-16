@@ -13,6 +13,7 @@ router.get('/cart',isLoggedIn, usersCtrl.cart)
 router.get('/checkout', usersCtrl.goCheckOut)
 router.delete('/cart/:id', usersCtrl.delete)
 router.delete('/cart/:id/checkout', usersCtrl.checkOut)
+router.delete('/cart/:id/remove', usersCtrl.remove)
 
 
 

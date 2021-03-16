@@ -3,6 +3,7 @@ const cartsCtrl = require('../controllers/carts');
 const cart = require('../models/cart');
 
 router.post('/', isLoggedIn, cartsCtrl.addToCart)
+router.delete('/:id/remove', cartsCtrl.remove)
 
 
 function isLoggedIn(req, res, next){

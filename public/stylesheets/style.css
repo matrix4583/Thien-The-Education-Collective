@@ -4,14 +4,10 @@ body {
   flex-direction: column;
 }
 
-.form {
-
-
-}
-
 main {
   flex: 1 0 auto;
 }
+
 #black{
   color: black;
 }
@@ -35,4 +31,20 @@ main {
 .collection-item form {
   margin-top: -5px;
 }
+.empty-cart {
+  color: #8f8f8f;
+  display: flex;
+  font-size: 75px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
 

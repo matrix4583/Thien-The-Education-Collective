@@ -3,7 +3,13 @@ const Cart = require('../models/cart')
 
 module.exports = {
     addToCart,
+    remove
    
+}
+
+
+function remove(req, res){
+    res.redirect('/cart')
 }
 
 function flatten(arr, answer=[]){
