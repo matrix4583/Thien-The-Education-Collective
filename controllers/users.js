@@ -19,7 +19,11 @@ module.exports = {
 
 
 function remove(req, res){
-    console.log(req.user)
+    console.log(req.params.id)
+  Cart.findById(req.params.id, function(err, cart){
+      console.log(cart, req.body)
+  })
+
     res.redirect('/cart')
 }
 

@@ -3,14 +3,9 @@ const Cart = require('../models/cart')
 
 module.exports = {
     addToCart,
-    remove
    
 }
 
-
-function remove(req, res){
-    res.redirect('/cart')
-}
 
 function flatten(arr, answer=[]){
     for(let i=0; i< arr.length;i++){
@@ -78,6 +73,7 @@ function addToCart(req,res) {
         newCart.price = prices
         //console.log(User.cart,'HERRREEEEEE')
         User.cart = newCart
+        req.user.cart = newCart
     }
     newCart.save(function(err){
         res.redirect('/cart')
