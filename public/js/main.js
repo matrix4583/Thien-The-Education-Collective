@@ -7,9 +7,11 @@ const options = {
     onOpenEnd: null,
     onCloseStart: null,
     onCloseEnd: null,
-    preventScrolling: true
+    preventScrolling: true,
+    closeOnClick: false
 
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
@@ -25,3 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, options);
   });
+
+  function submitform() {   document.myform.submit(); } 

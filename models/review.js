@@ -5,7 +5,7 @@ const reviewSchema = new mongoose.Schema({
     name: String,
     avatar: String,
     rating: {type: Number, min: 1, max: 5, default: 5},
-    user: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}]
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
   }, {
     timestamps: true
   });

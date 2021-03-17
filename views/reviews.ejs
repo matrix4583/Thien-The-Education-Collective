@@ -17,10 +17,12 @@
           <p><%=review.rating%>/5 <br>
             Posted by <%=review.name %>
           </p>
-          <a href="" class="secondary-content"><% if(user) { %>
-            <%if(userName===review.name){ %>
-              <form style="width: 100px" action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
-                <button class="btn #616161 grey darken-2" type="submit"> <i class="material-icons">delete_forever</i></button>
+          <% if(user) { %>
+            <%if(userId.equals(review.user)){ %>
+              
+              <form name="myform" style="width: 100px" action="/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                <a href="javascript: submitform()" style="color:red" class="secondary-content">delete review</a>
+                <!-- <button class="btn #616161 grey darken-2" type="submit"><i class="material-icons">delete_forever</i></button> -->
               </form>
               <% } %>
                 <% }%></a>      
@@ -40,18 +42,16 @@
               <label>Review:</label>
               <textarea name="content"></textarea>
               <label>Rating:</label>
-              <select name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
+              <input type="number"  name="rating" min="1" max="5" placeholder="Rate 1-5">
+
             
-  
-              <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
+              <div class="center">
+                <button  class="btn waves-effect waves-light black" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+
+              </div>
+            
               <!-- <input type="submit" value="Add Review"> -->
             </form><br>
 

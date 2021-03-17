@@ -25,7 +25,7 @@ function reviews(req,res){
                 const userEmail = req.user.email
                 const userId = req.user._id
                 const userName = req.user.name
-                //console.log(reviews)
+                console.log(userId,'here', reviews)
                 res.render('reviews', {reviews, userEmail, userId, userName})
             } else {
                 //console.log(reviews,'here')
