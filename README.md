@@ -4,22 +4,20 @@ This is a web application I developed to help show case The Local Bar & Grill an
 ## Screenshots 
 ![Alt Text](/public/images/ss2.png?raw=true "localbar")
 ![Alt Text](/public/images/ss1.png?raw=true "localbar")
-![Alt Text](/images/ss3.png?raw=true "localbar")
-![Alt Text](/images/ss4.png?raw=true "localbar")
-![Alt Text](/images/ss5.png?raw=true "localbar")
-![Alt Text](/images/ss6.png?raw=true "localbar")
+![Alt Text](/public/images/ss3.png?raw=true "localbar")
+![Alt Text](/public/images/ss4.png?raw=true "localbar")
+![Alt Text](/public/images/ss5.png?raw=true "localbar")
+![Alt Text](/public/images/ss6.png?raw=true "localbar")
 
 
 
 
 #### Technologies Used
-MongoDB/Mongoose
-Node.js
-Express
+MongoDB/Mongoose | Node.js | Express
 
-#### Link To App
+#### Link To Deployed App
 https://localbarorlando.herokuapp.com/
 
-#### Trello Board & Wireframes
+#### Link To Trello Board & Wireframes
 https://trello.com/b/b27VPJmD/restaurant-app
 
