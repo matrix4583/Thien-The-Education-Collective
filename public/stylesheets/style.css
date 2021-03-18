@@ -46,7 +46,7 @@ main {
   height: 100vh;
 }
 .carousel { 
-  min-height: 700px;
+  /* min-height: 700px; */
   margin-top: 0px;
   margin-bottom: -250px;
   }
