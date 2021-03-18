@@ -68,6 +68,7 @@ main {
   @media only screen and (max-width: 600px) {
     .carousel {
       margin-bottom: -500px;
+      min-height: 300px;
     }
   }
 
