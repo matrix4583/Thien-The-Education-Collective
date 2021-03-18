@@ -1,9 +1,5 @@
-
 const mongoose = require('mongoose');
 
-// Create your Cart Model
-
-// store atleast googleid
 const cartSchema = new mongoose.Schema({
     item: Array,
     price: Array,
@@ -13,6 +9,5 @@ const cartSchema = new mongoose.Schema({
   },{
     timestamps: true
   });
-
 
   module.exports = mongoose.model('Cart', cartSchema);

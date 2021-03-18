@@ -3,77 +3,74 @@
 
 <head>
   <title></title>
-  <!-- Google Icon Fonts used by Materialize -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;500;700&family=Kalam:wght@700&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;500;700&family=Kalam:wght@700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="stylesheets/style.css" />
-  <!-- JavaScript for Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/main.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/glass.png" />
 </head>
 
 <body>
-  <div class="navbar-fixed">
- 
-    <nav>
 
+  <div class="navbar-fixed">
+    <nav>
       <div id="nav-mobile" class="nav-wrapper #212121 grey darken-4">
         <a href="/"><img src="images/logo.png" class="brand-logo center" alt="" width="120px" height="90%"></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <% if(user) { %>
-          <li><a href="/cart">Cart</a></li>
-          <% } %>
-            <li><a href="/order">Order Online</a></li>
-          <li>
-            <% if (user) { %>
-              <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-            <% } else { %>
-              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+            <li><a href="/cart">Cart</a></li>
             <% } %>
-           
-          </li>
+              <li><a href="/order">Order Online</a></li>
+              <li>
+                <% if (user) { %>
+                  <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                  <% } else { %>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                    <% } %>
+              </li>
         </ul>
         <ul class="left hide-on-med-and-down">
-            <li><a href="/">Home</a></li>
-            <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Menu</a></li>
-            <ul id='dropdown1' class='dropdown-content'>
-              <li><a  id="black" href="/menu">Food</a></li>
-              <li><a  id="black" href="/drinks">Drinks</a></li>
-              <li><a  id="black" href="/hhmenu">Happy Hour</a></li>
-            </ul>
-            <li><a href="/about">Hours & Location</a></li>
-            <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Menu</a></li>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a id="black" href="/menu">Food</a></li>
+            <li><a id="black" href="/drinks">Drinks</a></li>
+            <li><a id="black" href="/hhmenu">Happy Hour</a></li>
+          </ul>
+          <li><a href="/about">Hours & Location</a></li>
+          <li><a href="/reviews">Reviews</a></li>
         </ul>
       </div>
     </nav>
   </div>
+
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/">Home</a></li>
     <li><a class='dropdown-trigger' href='#' data-target='dropdown2'>Menu</a></li>
-            <ul id='dropdown2' class='dropdown-content'>
-              <li><a  id="black" href="/menu">Food</a></li>
-              <li><a  id="black" href="/drinks">Drinks</a></li>
-              <li><a  id="black" href="/hhmenu">Happy Hour</a></li>
-            </ul>
+    <ul id='dropdown2' class='dropdown-content'>
+      <li><a id="black" href="/menu">Food</a></li>
+      <li><a id="black" href="/drinks">Drinks</a></li>
+      <li><a id="black" href="/hhmenu">Happy Hour</a></li>
+    </ul>
     <li><a href="/about">Hours & Location</a></li>
     <li><a href="/reviews">Reviews</a></li>
     <li><a href="/order">Order Online</a></li>
     <% if(user) { %>
       <li><a href="/cart">Cart</a></li>
       <% } %>
-    
-    <li>
-        <% if (user) { %>
-          <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-        <% } else { %>
-          <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-        <% } %>
-      </li>
+        <li>
+          <% if (user) { %>
+            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+            <% } else { %>
+              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <% } %>
+        </li>
   </ul>

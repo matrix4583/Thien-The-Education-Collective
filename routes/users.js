@@ -15,13 +15,9 @@ router.delete('/cart/:id', usersCtrl.delete)
 router.delete('/cart/:id/checkout', usersCtrl.checkOut)
 router.delete('/cart/:id/remove', usersCtrl.remove)
 
-
-
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()) return next()
-    // req.Authenticated function is given to us by passport
     res.redirect('/auth/google')
 }
-
 
 module.exports = router;

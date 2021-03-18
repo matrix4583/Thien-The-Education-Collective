@@ -62,13 +62,48 @@ main {
     font-family: 'Kalam', cursive;
   }
   .welcome {
+    width: 75%;
+    height: auto;
+  }
+  .menu-pic {
     width:75%;
     height: auto;
   }
+  #drinks {
+    width:75%;
+    height: auto;
+    border: 0;
+  }
+  #drinks-content {
+    margin: -3%;
+  }
+  .map {
+    width:auto;
+    height: 75%;
+    border:0;
+  }
+  .hh {
+    width:75%;
+    height: auto;
+ 
+  }
+  #x {
+    display:none;
+  }
+  #contact {
+    width:auto;
+  }
   @media only screen and (max-width: 500px) {
-    .hide{
+    #x{
+      display:flex
+    }
+    #del-review{
+      display:none;
+    }
+    #hide{
       display: none;
     }
+  
     
   }
 
