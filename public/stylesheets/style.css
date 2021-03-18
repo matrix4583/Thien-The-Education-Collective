@@ -61,6 +61,10 @@ main {
     font-family: 'Cinzel', serif;
     font-family: 'Kalam', cursive;
   }
+  .welcome {
+    width:75%;
+    height: auto;
+  }
 
 
 
