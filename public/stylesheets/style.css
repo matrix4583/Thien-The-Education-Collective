@@ -65,13 +65,8 @@ main {
     width:75%;
     height: auto;
   }
-  @media only screen and (max-width: 480px) {
-    body{
-      background-color: darkgrey;
-    }
-    .carousel {
-      margin-bottom: -500px;
-    }
+  @media only screen and (max-width: 500px) {
+
     
   }
 
