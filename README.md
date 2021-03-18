@@ -1,7 +1,5 @@
-# passport-boilerplate
-
-
-This is your passport boilerplate.
+# The Local Bar & Grill
+This is a web application I developed to help show case The Local Bar & Grill and proivide it with a place for customers to order food online and a space for customers to leave reviews. 
 
 ## Setup 
 
