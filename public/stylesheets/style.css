@@ -66,10 +66,9 @@ main {
     height: auto;
   }
   @media only screen and (max-width: 500px) {
-    .carousel {
-      width: 250px !important;
+    .card .card-content .card-title {
+      width:250px;
     }
-
     
   }
 
