@@ -45,6 +45,14 @@ main {
   align-items: center;
   height: 100vh;
 }
+.carousel { 
+  min-height: 700px;
+  margin-top: 0px;
+  margin-bottom: -250px;
+  }
+  .carousel .carousel-item {
+    width:500px !important;
+  }
 
 
 

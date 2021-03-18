@@ -4,6 +4,8 @@
 <head>
   <title></title>
   <!-- Google Icon Fonts used by Materialize -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -51,7 +53,12 @@
   </div>
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/">Home</a></li>
-    <li><a href="/menu">Menu</a></li>
+    <li><a class='dropdown-trigger' href='#' data-target='dropdown2'>Menu</a></li>
+            <ul id='dropdown2' class='dropdown-content'>
+              <li><a  id="black" href="/menu">Food</a></li>
+              <li><a  id="black" href="/drinks">Drinks</a></li>
+              <li><a  id="black" href="/hhmenu">Happy Hour</a></li>
+            </ul>
     <li><a href="/about">Hours & Location</a></li>
     <li><a href="/reviews">Reviews</a></li>
     <li><a href="/order">Order Online</a></li>
