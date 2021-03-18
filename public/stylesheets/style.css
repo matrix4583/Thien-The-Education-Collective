@@ -53,6 +53,14 @@ main {
   .carousel .carousel-item {
     width:500px !important;
   }
+  #diffFont {
+    font-family: 'Cinzel', serif;
+  }
+  #diffFontTwo {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Cinzel', serif;
+    font-family: 'Kalam', cursive;
+  }
 
 
 
