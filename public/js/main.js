@@ -12,8 +12,8 @@ const options = {
   numVisible: 5,
   dist: -100,
   autoPlay: true,
-  autoStart: true
-
+  autoStart: true,
+  indicators: true
 }
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.timepicker');
@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.dropdown-trigger-two');
   var instances = M.Dropdown.init(elems, options);
 });
+var instance = M.Carousel.init({
+  fullWidth: true,
+  indicators: true
+});
+
 
 function submitform() { document.myform.submit(); }
 
@@ -62,4 +67,9 @@ $(document).ready(function () {
     $('.carousel').carousel('next');
 
   }, 4000)
+});
+
+$('.carousel.carousel-slider').carousel({
+  fullWidth: true,
+  indicators: true
 });

@@ -26,14 +26,14 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <% if(user) { %>
-            <li><a href="/cart">Cart</a></li>
+            <li><a href="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
             <% } %>
-              <li><a href="/order">Order Online</a></li>
+              <li><a href="/order"><i class="material-icons left">trending_flat</i>Order Online</a></li>
               <li>
                 <% if (user) { %>
-                  <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                  <a href="/logout"><i class="material-icons left">person</i>Log Out</a>
                   <% } else { %>
-                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                    <a href="/auth/google"><i class="material-icons left">person_outline</i>Login with Google</a>
                     <% } %>
               </li>
         </ul>
@@ -53,24 +53,24 @@
   </div>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="/">Home</a></li>
-    <li><a class='dropdown-trigger' href='#' data-target='dropdown2'>Menu</a></li>
+    <li><a href="/"><i class="material-icons left">home</i>Home</a></li>
+    <li><a class='dropdown-trigger' href='#' data-target='dropdown2'><i class="material-icons left">menu</i>Menu</a></li>
     <ul id='dropdown2' class='dropdown-content'>
       <li><a id="black" href="/menu">Food</a></li>
       <li><a id="black" href="/drinks">Drinks</a></li>
       <li><a id="black" href="/hhmenu">Happy Hour</a></li>
     </ul>
-    <li><a href="/about">Hours & Location</a></li>
-    <li><a href="/reviews">Reviews</a></li>
-    <li><a href="/order">Order Online</a></li>
+    <li><a href="/about"><i class="material-icons left">info_outline</i>Hours & Location</a></li>
+    <li><a href="/reviews"><i class="material-icons left">star_border</i>Reviews</a></li>
+    <li><a href="/order"><i class="material-icons left">trending_flat</i>Order Online</a></li>
     <% if(user) { %>
-      <li><a href="/cart">Cart</a></li>
+      <li><a href="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
       <% } %>
         <li>
           <% if (user) { %>
-            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+            <a href="/logout"><i class="material-icons left">person</i>Log Out</a>
             <% } else { %>
-              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <a href="/auth/google"><i class="material-icons left">person_outline</i>Login with Google</a>
               <% } %>
         </li>
   </ul>
