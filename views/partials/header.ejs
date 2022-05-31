@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Local Bar & Grill</title>
+  <title>The Education Collective</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <link
@@ -22,15 +22,10 @@
 
   <div class="navbar-fixed">
     <nav>
-      <div id="nav-mobile" class="nav-wrapper #212121 grey darken-4">
-        <a href="/"><img src="images/logo.png" class="brand-logo center" alt="" width="120px" height="90%"></a>
+      <div id="nav-mobile" class="nav-wrapper">
+        <a href="/"><img src="images/logo.png" class="brand-logo center" alt="LOGO" width="120px" height="90%"></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <% if(user) { %>
-            <li><a href="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
-            <% } %>
-              <li><a href="/order"><i class="material-icons left">trending_flat</i>Order Online</a></li>
-              <li>
                 <% if (user) { %>
                   <a href="/logout"><i class="material-icons left">person</i>Log Out</a>
                   <% } else { %>
@@ -40,14 +35,6 @@
         </ul>
         <ul class="left hide-on-med-and-down">
           <li><a href="/">Home</a></li>
-          <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Menu</a></li>
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a id="black" href="/menu">Food</a></li>
-            <li><a id="black" href="/drinks">Drinks</a></li>
-            <li><a id="black" href="/hhmenu">Happy Hour</a></li>
-          </ul>
-          <li><a href="/about">Hours & Location</a></li>
-          <li><a href="/reviews">Reviews</a></li>
         </ul>
       </div>
     </nav>
@@ -55,18 +42,6 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/"><i class="material-icons left">home</i>Home</a></li>
-    <li><a class='dropdown-trigger' href='#' data-target='dropdown2'><i class="material-icons left">menu</i>Menu</a></li>
-    <ul id='dropdown2' class='dropdown-content'>
-      <li><a id="black" href="/menu">Food</a></li>
-      <li><a id="black" href="/drinks">Drinks</a></li>
-      <li><a id="black" href="/hhmenu">Happy Hour</a></li>
-    </ul>
-    <li><a href="/about"><i class="material-icons left">info_outline</i>Hours & Location</a></li>
-    <li><a href="/reviews"><i class="material-icons left">star_border</i>Reviews</a></li>
-    <li><a href="/order"><i class="material-icons left">trending_flat</i>Order Online</a></li>
-    <% if(user) { %>
-      <li><a href="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
-      <% } %>
         <li>
           <% if (user) { %>
             <a href="/logout"><i class="material-icons left">person</i>Log Out</a>
