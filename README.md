@@ -3,11 +3,11 @@
 ## Before you can contribute ensure you have the following installed
 
 ### Git
-For Windows: https://gitforwindows.org/
-For Mac: https://sourceforge.net/projects/git-osx-installer/files/git-2.23.0-intel-universal-mavericks.dmg/download?use_mirror=autoselect
+- For Windows: https://gitforwindows.org/
+- For Mac: https://sourceforge.net/projects/git-osx-installer/files/git-2.23.0-intel-universal-mavericks.dmg/download?use_mirror=autoselect
 
 ### Node.js
-https://nodejs.org/en/download/
+- https://nodejs.org/en/download/
 
 ## Clone the Repo
 - Open git bash or terminal or whatever you use and move into the location you wish to place the files
