@@ -17,6 +17,7 @@
 
 ## Make your feature branch
 - Inside The-Education-Collective folder "git checkout -b yourname"
+- This branch is your own so main branch does not get affected.
 
 ## To push your changes 
 - Ensure you are on your branch and not main. "git status" will tell you.
@@ -28,3 +29,7 @@
 - Go here - https://github.com/AndrewDimes/The-Education-Collective/pulls
 - Click New pull request
 - Click Create pull request
+
+## To run the website locally
+- In The-Education-Collective folder type "npm start"
+- Navigate to http://localhost:3000/ in your browser.
