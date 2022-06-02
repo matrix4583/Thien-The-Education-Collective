@@ -12,11 +12,11 @@
 ## Clone the Repo
 - Open git bash or terminal or whatever you use and move into the location you wish to place the files
 - Clone the repo: ```git clone https://github.com/AndrewDimes/The-Education-Collective.git```
-- Move into the newly created repo/project folder: "cd The-Education-Collective"
+- Move into the newly created repo/project folder: ```cd The-Education-Collective```
 - Install the Node modules: ```npm i```
 
 ## Make your feature branch
-- Inside The-Education-Collective folder "git checkout -b yourbranchname"
+- Inside The-Education-Collective folder ```git checkout -b yourbranchname```
 - This branch is your own so main branch does not get affected. User your name for branch name ex. AndrewDimes.
 
 ## Create .gitignore and .env file
