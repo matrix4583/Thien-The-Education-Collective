@@ -19,6 +19,11 @@
 - Inside The-Education-Collective folder "git checkout -b yourname"
 - This branch is your own so main branch does not get affected.
 
+## Create .gitignore and .env file
+- In the main folder of the project create a file called".gitignore" and ".env" file
+- In the .gitignore file write .env
+- Message me for the enviorment variables you need to put inside the .env file.
+
 ## To push your changes 
 - Ensure you are on your branch and not main. "git status" will tell you.
 - "git add ."
