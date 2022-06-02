@@ -16,8 +16,8 @@
 - Install the Node modules: ```npm i```
 
 ## Make your feature branch
-- Inside The-Education-Collective folder "git checkout -b yourname"
-- This branch is your own so main branch does not get affected.
+- Inside The-Education-Collective folder "git checkout -b yourbranchname"
+- This branch is your own so main branch does not get affected. User your name for branch name ex. AndrewDimes.
 
 ## Create .gitignore and .env file
 - In the main folder of the project create a file called ```.gitignore``` and ```.env``` file
@@ -27,7 +27,7 @@
 ## To push your changes 
 - Ensure you are on your branch and not main. ```git status``` will tell you.
 - ```git add .```
-- ```git commit-m"your words here"```
+- ```git commit -m"Write what you did here"```
 - ```git push origin yourbranchname```
 
 ## To make a pull request(Add your changes to main branch)
