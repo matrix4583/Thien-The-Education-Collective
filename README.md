@@ -11,9 +11,9 @@
 
 ## Clone the Repo
 - Open git bash or terminal or whatever you use and move into the location you wish to place the files
-- Clone the repo: "git clone https://github.com/AndrewDimes/The-Education-Collective.git"
+- Clone the repo: ```git clone https://github.com/AndrewDimes/The-Education-Collective.git```
 - Move into the newly created repo/project folder: "cd The-Education-Collective"
-- Install the Node modules: "npm i"
+- Install the Node modules: ```npm i```
 
 ## Make your feature branch
 - Inside The-Education-Collective folder "git checkout -b yourname"
@@ -21,14 +21,14 @@
 
 ## Create .gitignore and .env file
 - In the main folder of the project create a file called ```.gitignore``` and ```.env``` file
-- In the .gitignore file write .env
+- In the ```.gitignore``` file write ```.env```
 - Message me for the enviorment variables you need to put inside the .env file otherwise you will not be able to run locally.
 
 ## To push your changes 
-- Ensure you are on your branch and not main. "git status" will tell you.
+- Ensure you are on your branch and not main. ```git status``` will tell you.
 - ```git add .```
-- "git commit-m"your words here""
-- "git push origin yourbranchname"
+- ```git commit-m"your words here"```
+- ```git push origin yourbranchname```
 
 ## To make a pull request(Add your changes to main branch)
 - Go here - https://github.com/AndrewDimes/The-Education-Collective/pulls
@@ -36,5 +36,5 @@
 - Click Create pull request
 
 ## To run the website locally
-- In The-Education-Collective folder type "npm start"
+- In The-Education-Collective folder type ```npm start```
 - Navigate to http://localhost:3000/ in your browser.
