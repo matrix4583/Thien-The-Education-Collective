@@ -1,3 +1,12 @@
+// load the env vars
+require('dotenv').config();
+require('dotenv').config({ path: 'config.env' });
+
+
+
+
+
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -7,8 +16,6 @@ var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
 
-// load the env vars
-require('dotenv').config();
 
 // create the Express app
 var app = express();
@@ -20,6 +27,9 @@ require('./config/passport');
 
 const indexRoutes = require('./routes/index');
 const usersRoutes = require('./routes/users');
+const addPostRoutes = require('./routes/addPostRouts');
+
+
 
 
 

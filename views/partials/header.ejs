@@ -35,6 +35,11 @@
         </ul>
         <ul class="left hide-on-med-and-down">
           <li><a href="/">Home</a></li>
+		  <li><a href="/">Collection</a></li>
+		  <% if (user) { %>
+		   <li><a href="/addPosts">Add Post</a></li>
+		   <% }%>
+		  
         </ul>
       </div>
     </nav>
@@ -42,6 +47,7 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/"><i class="material-icons left">home</i>Home</a></li>
+	<li><a href="/"><i class="material-icons left">collection</i>Collections</a></li>
         <li>
           <% if (user) { %>
             <a href="/logout"><i class="material-icons left">person</i>Log Out</a>

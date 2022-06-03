@@ -1,0 +1,4 @@
+DATABASE_URL=mongodb+srv://AndrewDimes:Buster1992@projecttwo.qjj7c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+GOOGLE_CLIENT_ID=1067251494797-5ohba7on3e1mspg3uso9kr7s8adg0ora.apps.googleusercontent.com
+GOOGLE_SECRET=ceIyxcnm3RAaUcRNIlCRZd9K
+GOOGLE_CALLBACK=http://localhost:3000/oauth2callback

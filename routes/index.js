@@ -5,6 +5,10 @@ router.get('/', function(req, res) {
   res.redirect('/users')
 });
 
+router.get('/', function(req, res) {
+  res.redirect('/addPosts')
+});
+
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
