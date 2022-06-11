@@ -1,7 +1,6 @@
 // load the env vars
 require('dotenv').config();
-require('dotenv').config({ path: 'config.env' });
-
+require('dotenv').config({ path: 'ThienEnvConfig.env' });
 
 
 
@@ -27,8 +26,10 @@ require('./config/passport');
 
 const indexRoutes = require('./routes/index');
 const usersRoutes = require('./routes/users');
-const addPostRoutes = require('./routes/addPostRouts');
+// const addPostRoutes = require('./routes/addPostRouts');
+// const addPostTestRoutes = require('./routes/addPostTestRoute');
 
+//Accessing database
 
 
 

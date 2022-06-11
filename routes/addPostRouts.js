@@ -8,5 +8,5 @@ module.exports =
 
 function addPost(req, res, next)
 {
-    res.render('addPosts')
+    res.render('addPostsView')
 }

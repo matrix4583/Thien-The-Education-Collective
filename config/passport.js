@@ -26,11 +26,22 @@ passport.use(new GoogleStrategy({
           googleId: profile.id,
           avatar: profile._json.picture
         })
+        // const insertPost = new User({
+        //   name: 'Thien',
+        //   title: 'test',
+        //   description: 'test description',
+        //   author: profile.displayName
+        // })
         //save
         newUser.save(function(err){
           if(err) return cb(err);
           return cb(null, newUser)
         })
+        // insertPost.save(function(err){
+        //   if(err) return cb(err);
+        //   return cb(null, insertPost)
+          
+        // })
       }
     })
   }

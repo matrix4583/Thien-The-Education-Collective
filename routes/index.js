@@ -8,6 +8,10 @@ router.get('/', function(req, res) {
 router.get('/', function(req, res) {
   res.redirect('/addPosts')
 });
+// router.get('/', function(req, res) {
+//   res.redirect('/addPostsTest')
+// });
+
 
 router.get('/auth/google', passport.authenticate(
   'google',

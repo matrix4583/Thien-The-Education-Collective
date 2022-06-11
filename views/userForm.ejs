@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!--====form section start====-->
+<%- include('./partials/header') %>
+<div class="user-detail">
+   
+    <hr>
+    <form action="/create" method="POST">
+          <label>Title</label>
+          <input type="text" placeholder="Enter Title" name="title" required >
+          <label>Description</label>
+          <input type="text" placeholder="Enter Description" name="description" required>
+          <label>Youtube URL</label>
+          <input type="text" placeholder="Youtube URL?" name="youtube_URL" required>
+          <!-- <label>Youtube URL</label> -->
+         <!--  <input type="city" placeholder="Enter Full City" name="city" required>
+          <label>Country</label>
+          <input type="text" placeholder="Enter Full Country" name="country" required> -->
+          <button type="submit">Submit</button>
+    </form>
+        </div>
+</div>
+<!--====form section start====-->
+</body>
+
+  <%- include('./partials/footer') %>
+</html>
